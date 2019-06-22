@@ -1,0 +1,94 @@
+namespace BTS.TallerBizTalk.Esquemas.Operaciones {
+    using Microsoft.XLANGs.BaseTypes;
+    
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.BizTalk.Schema.Compiler", "3.0.1.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+    [SchemaType(SchemaTypeEnum.Document)]
+    [Schema(@"http://BTS.TallerBizTalk.Esquemas.Operaciones.OperacionesSalida",@"OperacionesSalida")]
+    [System.SerializableAttribute()]
+    [SchemaRoots(new string[] {@"OperacionesSalida"})]
+    public sealed class OperacionesSalida : Microsoft.XLANGs.BaseTypes.SchemaBase {
+        
+        [System.NonSerializedAttribute()]
+        private static object _rawSchema;
+        
+        [System.NonSerializedAttribute()]
+        private const string _strSchema = @"<?xml version=""1.0"" encoding=""utf-16""?>
+<xs:schema xmlns=""http://BTS.TallerBizTalk.Esquemas.Operaciones.OperacionesSalida"" xmlns:b=""http://schemas.microsoft.com/BizTalk/2003"" targetNamespace=""http://BTS.TallerBizTalk.Esquemas.Operaciones.OperacionesSalida"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"">
+  <xs:element name=""OperacionesSalida"">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name=""Maximo"">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name=""ValorMayor"" type=""xs:int"" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name=""DatoFecha"">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name=""FechaFinal"" type=""xs:date"" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name=""FunctoidsLogicos"">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs=""0"" name=""Resultado1"" type=""xs:int"" />
+              <xs:element minOccurs=""0"" name=""Resultado2"" type=""xs:int"" />
+              <xs:element minOccurs=""0"" name=""Resultado3"" type=""xs:string"" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name=""OperacionesBasicas"">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name=""Resultado4"" type=""xs:int"" />
+              <xs:element name=""Resultado5"" type=""xs:int"" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name=""OperacionesStrings"">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name=""ValorMayusculas"" type=""xs:string"" />
+              <xs:element name=""ValorLeft"" type=""xs:string"" />
+              <xs:element name=""ResultadoScript"" type=""xs:string"" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>";
+        
+        public OperacionesSalida() {
+        }
+        
+        public override string XmlContent {
+            get {
+                return _strSchema;
+            }
+        }
+        
+        public override string[] RootNodes {
+            get {
+                string[] _RootElements = new string [1];
+                _RootElements[0] = "OperacionesSalida";
+                return _RootElements;
+            }
+        }
+        
+        protected override object RawSchema {
+            get {
+                return _rawSchema;
+            }
+            set {
+                _rawSchema = value;
+            }
+        }
+    }
+}
