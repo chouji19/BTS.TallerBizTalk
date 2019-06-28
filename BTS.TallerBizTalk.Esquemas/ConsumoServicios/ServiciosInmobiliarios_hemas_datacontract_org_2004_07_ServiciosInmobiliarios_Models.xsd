@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServiciosInmobiliarios.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServiciosInmobiliarios.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="InmuebleRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="NumeroDocumento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDocumento" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InmuebleRequest" nillable="true" type="tns:InmuebleRequest" />
+  <xs:complexType name="InmuebleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Encabezado" nillable="true" type="tns:Encabezado" />
+      <xs:element minOccurs="0" name="Inmuebles" nillable="true" type="tns:ArrayOfInmueble" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InmuebleResponse" nillable="true" type="tns:InmuebleResponse" />
+  <xs:complexType name="Encabezado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoRespuest" type="xs:int" />
+      <xs:element minOccurs="0" name="Mensaje" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Encabezado" nillable="true" type="tns:Encabezado" />
+  <xs:complexType name="ArrayOfInmueble">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Inmueble" nillable="true" type="tns:Inmueble" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInmueble" nillable="true" type="tns:ArrayOfInmueble" />
+  <xs:complexType name="Inmueble">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Ciudad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoCiudad" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoDepartamento" type="xs:int" />
+      <xs:element minOccurs="0" name="CodigoPostal" type="xs:int" />
+      <xs:element minOccurs="0" name="Departamento" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Direccion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdInmueble" type="xs:int" />
+      <xs:element minOccurs="0" name="ValorRentaSemanal" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ValorSeguro" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Inmueble" nillable="true" type="tns:Inmueble" />
+</xs:schema>

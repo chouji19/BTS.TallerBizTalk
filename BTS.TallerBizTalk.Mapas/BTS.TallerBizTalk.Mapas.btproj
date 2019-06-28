@@ -32,6 +32,12 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>BTS.TallerBizTalk.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
       <Name>System</Name>
@@ -76,13 +82,29 @@
       <Name>BTS.TallerBizTalk.Utilidades</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Map Include="ConsumoServicios\ObtenerInmueblesResponse_ConsultaInmueblesResp.btm">
+      <TypeName>ObtenerInmueblesResponse_ConsultaInmueblesResp</TypeName>
+      <Namespace>BTS.TallerBizTalk.Mapas.ConsumoServicios</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
   <ItemGroup>
     <Map Include="Operaciones\OperacionesEntrada_OperacionesSalida.btm">
       <TypeName>OperacionesEntrada_OperacionesSalida</TypeName>
       <Namespace>BTS.TallerBizTalk.Mapas.Operaciones</Namespace>
       <SubType>Task</SubType>
     </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <Map Include="ConsumoServicios\ConsultaInmueblesReq_ObtenerInmuebles.btm">
+      <TypeName>ConsultaInmueblesReq_ObtenerInmuebles</TypeName>
+      <Namespace>BTS.TallerBizTalk.Mapas.ConsumoServicios</Namespace>
+      <SubType>Task</SubType>
+    </Map>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BTS.TallerBizTalk.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\BizTalk\BizTalkC.targets" />

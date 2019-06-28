@@ -381,7 +381,7 @@ public bool ValToBool(string val)
         private const int _useXSLTransform = 0;
         
         private const string _strArgList = @"<ExtensionObjects>
-  <ExtensionObject Namespace=""http://schemas.microsoft.com/BizTalk/2003/ScriptNS0"" AssemblyName=""BTS.TallerBizTalk.Utilidades, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"" ClassName=""BTS.TallerBizTalk.Utilidades.Utils"" />
+  <ExtensionObject Namespace=""http://schemas.microsoft.com/BizTalk/2003/ScriptNS0"" AssemblyName=""BTS.TallerBizTalk.Utilidades, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f91efbbede76e32e"" ClassName=""BTS.TallerBizTalk.Utilidades.Utils"" />
 </ExtensionObjects>";
         
         private const string _strSrcSchemasList0 = @"BTS.TallerBizTalk.Esquemas.Operaciones.OperacionesEntrada";

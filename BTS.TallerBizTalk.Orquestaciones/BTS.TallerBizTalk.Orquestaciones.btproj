@@ -4,12 +4,12 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F547AE2A-59EF-4F7C-9E40-EF35CC87B9E1}</ProjectGuid>
+    <ProjectGuid>{167ED323-4158-4A0E-8E00-5F349A8DACAC}</ProjectGuid>
     <ProjectTypeGuids>{EF7E3281-CD33-11D4-8326-00C04FA0CE8D};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>library</OutputType>
     <GenericProcessing>true</GenericProcessing>
-    <RootNamespace>BTS.TallerBizTalk.Esquemas</RootNamespace>
-    <AssemblyName>BTS.TallerBizTalk.Esquemas</AssemblyName>
+    <RootNamespace>BTS.TallerBizTalk.Orquestaciones</RootNamespace>
+    <AssemblyName>BTS.TallerBizTalk.Orquestaciones</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <BpelCompliance>True</BpelCompliance>
   </PropertyGroup>
@@ -73,67 +73,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="Cliente\ClienteRequest.xsd">
-      <TypeName>ClienteRequest</TypeName>
-      <Namespace>BTS.TallerBizTalk.Esquemas</Namespace>
+    <Content Include="ServiciosInmobiliarios.BindingInfo.xml" />
+    <XLang Include="ServiciosInmobiliarios.odx">
+      <TypeName>ServiciosInmobiliarios</TypeName>
+      <Namespace>BTS.TallerBizTalk.Orquestaciones</Namespace>
       <SubType>Task</SubType>
-    </Schema>
+    </XLang>
+    <Content Include="ServiciosInmobiliarios_Custom.BindingInfo.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Schema Include="Operaciones\OperacionesEntrada.xsd">
-      <TypeName>OperacionesEntrada</TypeName>
-      <Namespace>BTS.TallerBizTalk.Esquemas.Operaciones</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-  </ItemGroup>
-  <ItemGroup>
-    <Schema Include="FlatFiles\ClienteFF.xsd">
-      <TypeName>ClienteFF</TypeName>
-      <Namespace>BTS.TallerBizTalk.Esquemas.FlatFiles</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-  </ItemGroup>
-  <ItemGroup>
-    <Schema Include="Operaciones\OperacionesSalida.xsd">
-      <TypeName>OperacionesSalida</TypeName>
-      <Namespace>BTS.TallerBizTalk.Esquemas.Operaciones</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-  </ItemGroup>
-  <ItemGroup>
-    <Schema Include="ConsumoServicios\ConsultaInmueblesRequest.xsd">
-      <TypeName>ConsultaInmueblesRequest</TypeName>
-      <Namespace>BTS.TallerBizTalk.Esquemas.ConsumoServicios</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-  </ItemGroup>
-  <ItemGroup>
-    <Schema Include="ConsumoServicios\ConsultaInmueblesResponse.xsd">
-      <TypeName>ConsultaInmueblesResponse</TypeName>
-      <Namespace>BTS.TallerBizTalk.Esquemas.ConsumoServicios</Namespace>
-      <SubType>Task</SubType>
-    </Schema>
-  </ItemGroup>
-  <ItemGroup>
-    <Schema Include="ConsumoServicios\ServiciosInmobiliarios_hemas_datacontract_org_2004_07_ServiciosInmobiliarios_Models.xsd">
-      <SubType>Task</SubType>
-      <TypeName>ServiciosInmobiliarios_hemas_datacontract_org_2004_07_ServiciosInmobiliarios_Models</TypeName>
-      <Namespace>BTS.TallerBizTalk.Esquemas.Operaciones</Namespace>
-    </Schema>
-  </ItemGroup>
-  <ItemGroup>
-    <Schema Include="ConsumoServicios\ServiciosInmobiliarios_schemas_microsoft_com_2003_10_Serialization.xsd">
-      <SubType>Task</SubType>
-      <TypeName>ServiciosInmobiliarios_schemas_microsoft_com_2003_10_Serialization</TypeName>
-      <Namespace>BTS.TallerBizTalk.Esquemas.Operaciones</Namespace>
-    </Schema>
-  </ItemGroup>
-  <ItemGroup>
-    <Schema Include="ConsumoServicios\ServiciosInmobiliarios_tempuri_org.xsd">
-      <SubType>Task</SubType>
-      <TypeName>ServiciosInmobiliarios_tempuri_org</TypeName>
-      <Namespace>BTS.TallerBizTalk.Esquemas.Operaciones</Namespace>
-    </Schema>
+    <ProjectReference Include="..\BTS.TallerBizTalk.Esquemas\BTS.TallerBizTalk.Esquemas.btproj">
+      <Project>{f547ae2a-59ef-4f7c-9e40-ef35cc87b9e1}</Project>
+      <Name>BTS.TallerBizTalk.Esquemas</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BTS.TallerBizTalk.Mapas\BTS.TallerBizTalk.Mapas.btproj">
+      <Project>{0e21cc1b-1c43-4d62-be50-2fbf6705f1e3}</Project>
+      <Name>BTS.TallerBizTalk.Mapas</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="BTS.TallerBizTalk.snk" />
